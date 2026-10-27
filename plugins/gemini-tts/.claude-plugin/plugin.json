@@ -1,0 +1,4 @@
+{
+  "name": "gemini-tts",
+  "description": "English and Tamil voice narration with Gemini TTS on Vertex AI: chunking, emotion control, verification"
+}

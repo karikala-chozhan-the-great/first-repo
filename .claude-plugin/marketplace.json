@@ -1,0 +1,14 @@
+{
+  "name": "narration-tools",
+  "description": "Tools for generating voice narration",
+  "owner": {
+    "name": "karikala-chozhan-the-great"
+  },
+  "plugins": [
+    {
+      "name": "gemini-tts",
+      "source": "./plugins/gemini-tts",
+      "description": "English and Tamil voice narration with Gemini TTS on Vertex AI: chunking, emotion control, verification"
+    }
+  ]
+}

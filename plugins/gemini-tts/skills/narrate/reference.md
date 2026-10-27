@@ -40,7 +40,7 @@ Keep the key in an environment variable and never in code or in git:
 export GOOGLE_API_KEY="paste-your-key-here"
 ```
 
-In the environment this guide was tested in, the key was stored in a variable literally named `key`, so the test scripts read `os.environ["key"]`. `docs/narrate.py` reads `GOOGLE_API_KEY` first and falls back to `key`.
+In the environment this guide was tested in, the key was stored in a variable literally named `key`, so the test scripts read `os.environ["key"]`. `scripts/narrate.py` reads `GOOGLE_API_KEY` first and falls back to `key`.
 
 ### Restrict the key (do this first)
 
@@ -359,11 +359,11 @@ Docs (not tested): wrap short listener reactions in pipes inside the current spe
 4. Listen, and re-generate only the chunks that need it.
 5. Normalise loudness and convert to MP3 or whatever your editor needs.
 
-`docs/narrate.py` in this repo does steps 1 to 3 (tested on a Tamil script: 5 chunks, 131 seconds):
+`scripts/narrate.py` in this skill does steps 1 to 3 (tested on a Tamil script: 5 chunks, 131 seconds):
 
 ```bash
 export GOOGLE_API_KEY="..."
-python3 docs/narrate.py script.txt -o narration.wav \
+python3 scripts/narrate.py script.txt -o narration.wav \
   --voice Alnilam \
   --style "serious, authoritative documentary narrator, natural conversational pace, clear Tamil pronunciation" \
   --max-chars 1200 --pause 0.5
